@@ -1,0 +1,14 @@
+<h1>Product Index Page</h1>
+
+<%= form_tag(add_path, method: :post) do %>
+  <%= text_field_tag :name, "", id: 'product' %>
+  <%= submit_tag "add to cart" %>
+<% end %>
+
+<%# session[:cart] ||= [] %>
+<% cart.each do |product| %>
+  <p>
+    <%= product %>
+  </p>
+<% end %>
+
